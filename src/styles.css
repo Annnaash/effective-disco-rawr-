@@ -1,0 +1,93 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+.continent-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.continent-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.continent-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.continent-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.country-list {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.country-list h2 {
+  color: #2c3e50;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.country-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.country-list li {
+  background-color: #ecf0f1;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.country-list li:hover {
+  background-color: #d5dbdb;
+}
+
+@media (max-width: 768px) {
+  .continent-buttons {
+    flex-direction: column;
+  }
+
+  .country-list ul {
+    grid-template-columns: 1fr;
+  }
+}
